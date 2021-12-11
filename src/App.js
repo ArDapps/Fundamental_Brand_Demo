@@ -49,7 +49,10 @@ const [contract,setContract] = useState(null);
 const [brandName,setBrandName] =useState([]);
 useEffect(() => {
 const loadContract = async ()=>{
- const contractFile = await fetch('/abis/AnimalsNft.json');
+ const contractFile = await fetch('/abis/BrandName.json');
+ //error in build Because need to give react The permission 
+ //const contractFile = await fetch('../build/contracts.BrandName.json');
+
  console.log(contractFile)
  const convertContractFileToJson =  await contractFile.json();
  console.log(convertContractFileToJson,"contract Convert File")
